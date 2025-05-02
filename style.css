@@ -1,5 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans MT';
+}
+
 body {
-    font-family: Arial, sans-serif;
+    /* font-family: Arial, sans-serif; */
     text-align: center;
     background-color: #2e2e2e;
     color: #e0e0e0;
@@ -84,10 +91,34 @@ button:not(:hover) {
       background-color: #979797;
       transform: scale(1.1);
     }
-  }
+}
   
-  .winner {
+.winner {
     animation: winner-glow 1s ease-in-out infinite;
     border: 2px solid #d3d3d3;
     border-radius: 10px;
+}
+
+.water-mark {
+    display: flex;
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.2);
+    pointer-events: none;
+    gap: .5rem;
+}
+
+.water-mark strong{
+    color: #a259ff;
+}
+
+.water-mark img{
+    width: 20px;
+    height: 20px;
+    opacity: 0.5;
+    margin-bottom: -0.2rem;
 }
