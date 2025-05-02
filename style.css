@@ -122,3 +122,15 @@ button:not(:hover) {
     opacity: 0.5;
     margin-bottom: -0.2rem;
 }
+
+.logo-png{
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    z-index: 1000;
+}
+
+.logo-png img{
+    width: 80px;
+    height: 80px;
+}
