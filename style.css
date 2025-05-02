@@ -68,3 +68,14 @@ button:hover {
 .cell.o {
     color: #e0e0e0;
 }
+
+@keyframes winner-glow {
+    0%, 100% { background-color: #666; transform: scale(1); }
+    50% { background-color: #a259ff; transform: scale(1.1); }
+}
+  
+.winner {
+    animation: winner-glow 1s ease-in-out infinite;
+    border: 2px solid #a259ff;
+    border-radius: 10px;
+}
