@@ -70,12 +70,18 @@ button:hover {
 }
 
 @keyframes winner-glow {
-    0%, 100% { background-color: #666; transform: scale(1); }
-    50% { background-color: #a259ff; transform: scale(1.1); }
-}
+    0%, 100% {
+      background-color: #666;
+      transform: scale(1);
+    }
+    50% {
+      background-color: #979797;
+      transform: scale(1.1);
+    }
+  }
   
-.winner {
+  .winner {
     animation: winner-glow 1s ease-in-out infinite;
-    border: 2px solid #a259ff;
+    border: 2px solid #d3d3d3;
     border-radius: 10px;
 }
