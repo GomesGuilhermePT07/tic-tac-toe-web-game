@@ -37,18 +37,21 @@ function initBoard() {
 
 // Jogada do jogador
 function handleMove(e) {
-  const cell = e.target;
-  const index = cell.dataset.index;
+    const cell = e.target;
+    const index = cell.dataset.index;
 
-  if (cell.textContent !== "" || !gameActive) return;
+    if (cell.textContent !== "" || !gameActive) return;
 
-  cell.textContent = currentPlayer;
-  checkWinner();
-  if (gameActive) {
-    currentPlayer = currentPlayer === "X" ? "O" : "X";
-    statusText.textContent = `Vez do jogador: ${currentPlayer}`;
-  }
+    cell.textContent = currentPlayer;
+    cell.classList.add(currentPlayer.toLowerCase()); // Adiciona classe de estilo (x ou o)
+
+    checkWinner();
+    if (gameActive) {
+        currentPlayer = currentPlayer === "X" ? "O" : "X";
+        statusText.textContent = `Vez do jogador: ${currentPlayer}`;
+    }
 }
+  
 
 // Verificar vencedor ou empate
 function checkWinner() {

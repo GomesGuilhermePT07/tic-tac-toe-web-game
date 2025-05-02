@@ -60,4 +60,11 @@ body {
   button:hover {
     background-color: #923dff;
   }
+
+  .cell.x {
+    color: #a259ff;
+  }
   
+  .cell.o {
+    color: #e0e0e0;
+  }
