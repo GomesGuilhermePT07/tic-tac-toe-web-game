@@ -64,11 +64,11 @@ function checkWinner() {
         gameActive = false;
         statusText.textContent = `Jogador ${cells[a].textContent} venceu!`;
   
-        // Adiciona classe de animação às casas vencedoras
         cells[a].classList.add("winner");
         cells[b].classList.add("winner");
         cells[c].classList.add("winner");
   
+        disableBoard();
         return;
       }
     }
@@ -76,8 +76,10 @@ function checkWinner() {
     if (cells.every(cell => cell.textContent !== "")) {
       gameActive = false;
       statusText.textContent = "Empate!";
+      disableBoard();
     }
-}  
+}
+    
 
 // Reiniciar jogo
 restartBtn.addEventListener("click", initBoard);
