@@ -50,29 +50,34 @@ function handleMove(e) {
         currentPlayer = currentPlayer === "X" ? "O" : "X";
         statusText.textContent = `Vez do jogador: ${currentPlayer}`;
     }
-}
-  
+}  
 
 // Verificar vencedor ou empate
 function checkWinner() {
-  for (const combo of winningCombos) {
-    const [a, b, c] = combo;
-    if (
-      cells[a].textContent &&
-      cells[a].textContent === cells[b].textContent &&
-      cells[a].textContent === cells[c].textContent
-    ) {
-      gameActive = false;
-      statusText.textContent = `Jogador ${cells[a].textContent} venceu!`;
-      return;
+    for (const combo of winningCombos) {
+      const [a, b, c] = combo;
+      if (
+        cells[a].textContent &&
+        cells[a].textContent === cells[b].textContent &&
+        cells[a].textContent === cells[c].textContent
+      ) {
+        gameActive = false;
+        statusText.textContent = `Jogador ${cells[a].textContent} venceu!`;
+  
+        // Adiciona classe de animação às casas vencedoras
+        cells[a].classList.add("winner");
+        cells[b].classList.add("winner");
+        cells[c].classList.add("winner");
+  
+        return;
+      }
     }
-  }
-
-  if (cells.every(cell => cell.textContent !== "")) {
-    gameActive = false;
-    statusText.textContent = "Empate!";
-  }
-}
+  
+    if (cells.every(cell => cell.textContent !== "")) {
+      gameActive = false;
+      statusText.textContent = "Empate!";
+    }
+}  
 
 // Reiniciar jogo
 restartBtn.addEventListener("click", initBoard);
