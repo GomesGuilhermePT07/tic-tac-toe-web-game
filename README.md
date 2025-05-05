@@ -7,6 +7,15 @@
 
 ---
 
+<div align="left">
+  
+  ### 📈 Possible improvements:
+   - Add scoreboard
+   - Add multiplayer system
+</div>
+
+---
+
 <div align="center">
   
   ### 👀 How it looks like:
